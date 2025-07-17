@@ -1,0 +1,288 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #e9f2f9; /* Lighter, subtle blue background */
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px 40px; /* More padding */
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    overflow: hidden; /* Clear floats */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    gap: 25px; /* Space between image and text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure image covers the area */
+    border: 4px solid #007bff; /* Accent border */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Subtle shadow for pic */
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+header h1 {
+    margin: 0;
+    color: #1a1a1a;
+    font-size: 3em; /* Larger, more prominent name */
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: #555;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e0e0e0; /* Dashed separator */
+}
+
+section:last-of-type { /* Target the last section specifically */
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #007bff; /* Primary blue accent */
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff; /* Stronger accent line */
+    display: inline-flex; /* Use flex for icon alignment */
+    align-items: center;
+    padding-bottom: 8px;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase; /* Uppercase headings */
+    letter-spacing: 0.5px;
+}
+
+.icon {
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Icon color matches heading */
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 25px; /* More padding for bullet */
+    position: relative;
+    font-size: 1.05em;
+    color: #444;
+}
+
+ul li strong {
+    color: #333;
+}
+
+/* Custom bullet points */
+ul li::before {
+    content: "\2022"; /* Unicode for a bullet point */
+    color: #007bff; /* Color of the bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em; /* Slightly larger bullet */
+    line-height: 1.5; /* Align with text */
+}
+
+/* Specific styling for skills and strengths as a grid/chips */
+.skills-grid, .strengths-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    margin-top: 10px;
+}
+
+.skills-grid span, .strengths-list span {
+    background-color: #e0f2f7; /* Light blue background for skills */
+    color: #0069d9; /* Darker blue text */
+    padding: 8px 15px;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.95em;
+    font-weight: 500;
+    border: 1px solid #cce5ff;
+    transition: all 0.2s ease-in-out;
+}
+
+.skills-grid span:hover, .strengths-list span:hover {
+    background-color: #cce5ff;
+    border-color: #99cfff;
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projects ul li strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.15em;
+    color: #0056b3; /* Slightly darker blue for project titles */
+}
+
+.education p {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+}
+
+/* Feedback Section and Button */
+.feedback-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.rating-button {
+    background-color: #28a745; /* Green for action */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.rating-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+}
+
+.rating-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2);
+}
+
+.rating-button .fas {
+    font-size: 1.2em;
+}
+
+.feedback-note {
+    margin-top: 15px;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;
+    color: #777;
+    font-size: 0.95em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+footer .fas.fa-heart {
+    color: #dc3545; /* Red heart icon */
+    margin: 0 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .profile-header {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .skills-grid span, .strengths-list span {
+        padding: 7px 12px;
+        font-size: 0.9em;
+    }
+
+    .rating-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    ul li {
+        padding-left: 20px;
+        font-size: 1em;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+}
